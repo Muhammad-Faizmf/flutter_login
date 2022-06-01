@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
 
   final Future<FirebaseApp> _initialization = Firebase.initializeApp();
 
-  final storage = new FlutterSecureStorage();
+  final storage = FlutterSecureStorage();
 
   Future<bool> CheckLoginStatus() async {
     String? value = await storage.read(key: "uid");
@@ -41,7 +41,7 @@ class MyApp extends StatelessWidget {
           );
         }
         return MaterialApp(
-          title: "Login",
+          title: "Login App",
           theme: ThemeData(
             primaryColor: Colors.blue
           ),
